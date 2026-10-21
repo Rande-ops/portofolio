@@ -1,6 +1,6 @@
 # Portofolio Engelbertus Rande
 
-Landing page portofolio AR, VR, dan 3D. Semua isi halaman diambil dari satu file: **`data/site.js`**.
+Landing page portofolio AR, VR, dan 3D, dengan planet Bumi 3D di latar belakang yang bergerak mengikuti scroll. Semua isi halaman diambil dari satu file: **`data/site.js`**.
 Kamu tidak perlu menyentuh HTML, CSS, atau JavaScript untuk memperbarui isinya.
 
 ## Isi folder
@@ -9,9 +9,9 @@ Kamu tidak perlu menyentuh HTML, CSS, atau JavaScript untuk memperbarui isinya.
 index.html          kerangka halaman
 css/style.css       tampilan (warna, huruf, tata letak)
 js/main.js          merender isi dari data/site.js
-js/crystal.js       kristal 3D interaktif di hero
+js/planet.js        planet Bumi 3D di latar belakang (three.js dari CDN)
+js/scroll.js        smooth scroll (Lenis)
 js/icons.js         ikon logo tech stack
-vendor/             three.js (mesin 3D)
 data/site.js        ← SEMUA ISI WEBSITE, edit di sini
 img/                gambar karya
 files/              CV (PDF)
@@ -65,9 +65,9 @@ Di `data/site.js`, tambahkan satu baris di `models`:
 
 ## Cek di komputer sebelum upload
 
-Kristal 3D di hero memakai three.js (sudah ada di folder `vendor/`, tidak perlu internet).
-Browser tidak menjalankan file seperti ini kalau `index.html` dibuka dengan klik dua kali,
-jadi kristalnya diganti gambar diam. Untuk melihat versi lengkap di komputer:
+Planet 3D di latar belakang memakai three.js dan model Bumi yang dimuat dari internet,
+jadi butuh koneksi. Browser tidak menjalankan file seperti ini kalau `index.html` dibuka
+dengan klik dua kali, jadi planetnya tidak muncul. Untuk melihat versi lengkap di komputer:
 
 - VS Code: pasang ekstensi **Live Server**, klik kanan `index.html` → **Open with Live Server**, atau
 - Terminal di folder ini: `python -m http.server 8000`, lalu buka `http://localhost:8000`.
@@ -79,7 +79,7 @@ Buka Console browser (F12) untuk melihat baris yang salah.
 ## Mengganti angka, keahlian, dan tech stack
 
 Semuanya juga ada di `data/site.js`: `stats` (angka di bawah hero), `quote`, `expertise`,
-`tech` (ikon tersedia: unity, csharp, blender, figma, photoshop, canva, flutter, unreal, opencv, android)
+`tech` (6 pertama juga tampil di hero sebagai "Alat sehari-hari"; ikon tersedia: unity, csharp, blender, figma, photoshop, canva, flutter, unreal, opencv, android)
 dan `process` (diagram alur kerja). `availability` mengatur status "Menerima proyek freelance";
 kosongkan `""` untuk menyembunyikannya.
 
