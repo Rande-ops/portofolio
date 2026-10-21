@@ -23,10 +23,10 @@ window.SITE = {
     intro:
       "Saya membangun aplikasi AR dan VR, menyiapkan aset 3D yang siap dipakai di aplikasi, dan mendesain antarmukanya sampai jadi.",
     email: "barkeromen@gmail.com",
-    phone: "081215276343",
+    // phone: "081215276343",
     linkedin: "https://www.linkedin.com/in/engelbertus-rande-7baa42196/",
     sketchfab: "https://sketchfab.com/barkeromen/models",
-    github: "https://github.com/ghost-45-max",
+    github: "https://github.com/Rande-ops",
     cv: "files/CV-Engelbertus-Rande.pdf",
     photo: "img/avatar.webp",
     heroImage: "img/bravo-3d.webp",
@@ -54,7 +54,7 @@ window.SITE = {
       alt: "Tampilan virtual tour ruang perpustakaan ITDA",
       desc: "Virtual tour Perpustakaan ITDA dari gambar panorama: depan perpus, resepsionis, ruang baca lantai 1 dan 2, sampai ruang arsip, tanpa harus datang ke sana.",
       tools: ["3D Vista", "Blender", "Figma", "Photoshop"],
-      link: "https://ghost-45-max.github.io/test-perpustakaan.github.io/",
+      link: "https://rande-ops.github.io/test-perpustakaan.github.io/",
       linkLabel: "Buka tur"
     },
     {
@@ -136,24 +136,42 @@ window.SITE = {
      uid = kode di akhir link model Sketchfab (32 huruf/angka setelah nama model).
      thumb = gambar pratinjau (opsional, boleh dikosongkan ""). */
   models: [
-    { name: "Saron laras pelog", group: "Gamelan", uid: "c70bd58421c649a3825d57a0d90d6b81",
-      thumb: "https://media.sketchfab.com/models/c70bd58421c649a3825d57a0d90d6b81/thumbnails/2ab79aee0c2b43bd9543561556b0b208/b1012a97560640ca9ca4bfce21ee19d0.jpeg" },
-    { name: "Tempat wilah", group: "Gamelan", uid: "d59ead3a4fb5404dbf82bf6485484705",
-      thumb: "https://media.sketchfab.com/models/d59ead3a4fb5404dbf82bf6485484705/thumbnails/cbebb71c3e154e4a890b0da763f9020a/390b143dd6834adca9772b94c90d675a.jpeg" },
-    { name: "Palu saron", group: "Gamelan", uid: "b9701ffe63044eb9a54793dfdaf4a628",
-      thumb: "https://media.sketchfab.com/models/b9701ffe63044eb9a54793dfdaf4a628/thumbnails/667067237eaf429698d51f3bdfe656f0/8ada8b27c6034358937187d2228eefd5.jpeg" },
-    { name: "Mesin kopi", group: "Benda", uid: "8aee3f974f794d9987f67c211dbd1343",
-      thumb: "https://media.sketchfab.com/models/8aee3f974f794d9987f67c211dbd1343/thumbnails/5ff7823fb0234f52a28c7bbd87957eed/105627f009214c04bcfd48ff336d0c25.jpeg" },
-    { name: "Laptop", group: "Benda", uid: "59c6ee3465c14009ad43e134f0d61d05",
-      thumb: "https://media.sketchfab.com/models/59c6ee3465c14009ad43e134f0d61d05/thumbnails/2b3864cdfaeb40648edb60b5ffe7b1c6/2e187a33d9a6439b8a52645db88f8167.jpeg" },
-    { name: "Cerek", group: "Benda", uid: "286a523945614ae8aea75d480b0c9b0b",
-      thumb: "https://media.sketchfab.com/models/286a523945614ae8aea75d480b0c9b0b/thumbnails/cbea5d221a9444899e1972d7eaa0f81c/c3115bba09884d2db0020f12117d5733.jpeg" },
-    { name: "Botol", group: "Produk", uid: "85e369c7409a4e34a940cde31c8100b7",
-      thumb: "https://media.sketchfab.com/models/85e369c7409a4e34a940cde31c8100b7/thumbnails/000c1f612cf74c82a4d47c4d6a55142e/e9eef56efa444921987b441c5537a689.jpeg" },
-    { name: "Susu kotak", group: "Produk", uid: "8322289e9efd4cb39a8eefe4997761c7",
-      thumb: "https://media.sketchfab.com/models/8322289e9efd4cb39a8eefe4997761c7/thumbnails/5c5fc3f150f64ed6b5ab1538f15d88de/0a1697e313f9498e8768c6282e1e12a6.jpeg" },
-    { name: "Minuman kaleng", group: "Produk", uid: "e9aa16853da742fd95e278dce2603008",
-      thumb: "https://media.sketchfab.com/models/e9aa16853da742fd95e278dce2603008/thumbnails/256075c94e4b43debfb1725ed16f0c70/825b8639516647efb83271a1fbbd3573.jpeg" }
+    {
+      name: "Saron laras pelog", group: "Gamelan", uid: "c70bd58421c649a3825d57a0d90d6b81",
+      thumb: "https://media.sketchfab.com/models/c70bd58421c649a3825d57a0d90d6b81/thumbnails/2ab79aee0c2b43bd9543561556b0b208/b1012a97560640ca9ca4bfce21ee19d0.jpeg"
+    },
+    {
+      name: "Tempat wilah", group: "Gamelan", uid: "d59ead3a4fb5404dbf82bf6485484705",
+      thumb: "https://media.sketchfab.com/models/d59ead3a4fb5404dbf82bf6485484705/thumbnails/cbebb71c3e154e4a890b0da763f9020a/390b143dd6834adca9772b94c90d675a.jpeg"
+    },
+    {
+      name: "Palu saron", group: "Gamelan", uid: "b9701ffe63044eb9a54793dfdaf4a628",
+      thumb: "https://media.sketchfab.com/models/b9701ffe63044eb9a54793dfdaf4a628/thumbnails/667067237eaf429698d51f3bdfe656f0/8ada8b27c6034358937187d2228eefd5.jpeg"
+    },
+    {
+      name: "Mesin kopi", group: "Benda", uid: "8aee3f974f794d9987f67c211dbd1343",
+      thumb: "https://media.sketchfab.com/models/8aee3f974f794d9987f67c211dbd1343/thumbnails/5ff7823fb0234f52a28c7bbd87957eed/105627f009214c04bcfd48ff336d0c25.jpeg"
+    },
+    {
+      name: "Laptop", group: "Benda", uid: "59c6ee3465c14009ad43e134f0d61d05",
+      thumb: "https://media.sketchfab.com/models/59c6ee3465c14009ad43e134f0d61d05/thumbnails/2b3864cdfaeb40648edb60b5ffe7b1c6/2e187a33d9a6439b8a52645db88f8167.jpeg"
+    },
+    {
+      name: "Cerek", group: "Benda", uid: "286a523945614ae8aea75d480b0c9b0b",
+      thumb: "https://media.sketchfab.com/models/286a523945614ae8aea75d480b0c9b0b/thumbnails/cbea5d221a9444899e1972d7eaa0f81c/c3115bba09884d2db0020f12117d5733.jpeg"
+    },
+    {
+      name: "Botol", group: "Produk", uid: "85e369c7409a4e34a940cde31c8100b7",
+      thumb: "https://media.sketchfab.com/models/85e369c7409a4e34a940cde31c8100b7/thumbnails/000c1f612cf74c82a4d47c4d6a55142e/e9eef56efa444921987b441c5537a689.jpeg"
+    },
+    {
+      name: "Susu kotak", group: "Produk", uid: "8322289e9efd4cb39a8eefe4997761c7",
+      thumb: "https://media.sketchfab.com/models/8322289e9efd4cb39a8eefe4997761c7/thumbnails/5c5fc3f150f64ed6b5ab1538f15d88de/0a1697e313f9498e8768c6282e1e12a6.jpeg"
+    },
+    {
+      name: "Minuman kaleng", group: "Produk", uid: "e9aa16853da742fd95e278dce2603008",
+      thumb: "https://media.sketchfab.com/models/e9aa16853da742fd95e278dce2603008/thumbnails/256075c94e4b43debfb1725ed16f0c70/825b8639516647efb83271a1fbbd3573.jpeg"
+    }
   ],
 
   /* Galeri aset 3D. */
@@ -178,48 +196,68 @@ window.SITE = {
     {
       group: "Pekerjaan",
       items: [
-        { role: "AR Engineer", place: "PT Kualitas Teknologi Asia, Jakarta", years: "2023 – kini",
-          desc: "Aplikasi navigasi indoor AR, integrasi Unity dengan server lokal, Vuforia Area Target." },
-        { role: "Research and Development", place: "PT Kualitas Teknologi Asia, Jakarta", years: "2023 – kini",
-          desc: "Riset deteksi dan penghitungan objek, serta deteksi plat nomor untuk keluar-masuk gedung." },
-        { role: "3D Artist", place: "G45 Coworking Space, Yogyakarta", years: "2022 – 2023",
-          desc: "Aset 3D untuk proyek Metaverse Top Brand, UI/UX aplikasi VR, dan video trailer." }
+        {
+          role: "AR Engineer", place: "PT Kualitas Teknologi Asia, Jakarta", years: "2023 – kini",
+          desc: "Aplikasi navigasi indoor AR, integrasi Unity dengan server lokal, Vuforia Area Target."
+        },
+        {
+          role: "Research and Development", place: "PT Kualitas Teknologi Asia, Jakarta", years: "2023 – kini",
+          desc: "Riset deteksi dan penghitungan objek, serta deteksi plat nomor untuk keluar-masuk gedung."
+        },
+        {
+          role: "3D Artist", place: "G45 Coworking Space, Yogyakarta", years: "2022 – 2023",
+          desc: "Aset 3D untuk proyek Metaverse Top Brand, UI/UX aplikasi VR, dan video trailer."
+        }
       ]
     },
     {
       group: "Freelance",
       items: [
-        { role: "AR/VR Developer", place: "Yogyakarta", years: "2021 – kini",
-          desc: "Aplikasi Android dan web: tur perpustakaan virtual dan AR desa wisata, selesai dalam 1–3 bulan per proyek." },
-        { role: "Desain Grafis", place: "Yogyakarta", years: "2021",
-          desc: "Logo perusahaan dan iklan produk dengan Photoshop, Canva, dan Blender 3D." },
-        { role: "Staf Desain", place: "Institut Teknologi Dirgantara Adisutjipto", years: "2021",
-          desc: "Desain untuk kebutuhan kampus." }
+        {
+          role: "AR/VR Developer", place: "Yogyakarta", years: "2021 – kini",
+          desc: "Aplikasi Android dan web: tur perpustakaan virtual dan AR desa wisata, selesai dalam 1–3 bulan per proyek."
+        },
+        {
+          role: "Desain Grafis", place: "Yogyakarta", years: "2021",
+          desc: "Logo perusahaan dan iklan produk dengan Photoshop, Canva, dan Blender 3D."
+        },
+        {
+          role: "Staf Desain", place: "Institut Teknologi Dirgantara Adisutjipto", years: "2021",
+          desc: "Desain untuk kebutuhan kampus."
+        }
       ]
     },
     {
       group: "Mengajar dan berbagi",
       items: [
-        { role: "Instruktur pelatihan AR", place: "PT Widya Intelektual Bangsa", years: "Nov 2022",
-          desc: "Mengajar dasar proyek AR dan menyiapkan aset 3D." },
-        { role: "Pembicara", place: "OWWI ITDA", years: "Jun 2022",
-          desc: "Dasar animasi, desain, dan prospek kerja di industri animasi." },
-        { role: "Diklat storyboard animasi", place: "BDI Denpasar, Bali", years: "2019",
-          desc: "Membuat storyboard dari alur cerita yang disiapkan." }
+        {
+          role: "Instruktur pelatihan AR", place: "PT Widya Intelektual Bangsa", years: "Nov 2022",
+          desc: "Mengajar dasar proyek AR dan menyiapkan aset 3D."
+        },
+        {
+          role: "Pembicara", place: "OWWI ITDA", years: "Jun 2022",
+          desc: "Dasar animasi, desain, dan prospek kerja di industri animasi."
+        },
+        {
+          role: "Diklat storyboard animasi", place: "BDI Denpasar, Bali", years: "2019",
+          desc: "Membuat storyboard dari alur cerita yang disiapkan."
+        }
       ]
     },
     {
       group: "Pendidikan",
       items: [
-        { role: "Teknik Informatika", place: "Institut Teknologi Dirgantara Adisutjipto", years: "2016 – 2021",
-          desc: "IPK 3,34. Anggota Adisutjipto Linux Community." }
+        {
+          role: "Teknik Informatika", place: "Institut Teknologi Dirgantara Adisutjipto", years: "2016 – 2021",
+          desc: "IPK 3,34. Anggota Adisutjipto Linux Community."
+        }
       ]
     }
   ],
 
   skills: ["Unity 3D", "C#", "Augmented Reality", "Virtual Reality", "Vuforia", "AR Foundation",
-           "Blender", "3D Vista", "Figma", "Photoshop", "Canva", "Filmora", "Flutter",
-           "Unreal Engine", "OpenCV"],
+    "Blender", "3D Vista", "Figma", "Photoshop", "Canva", "Filmora", "Flutter",
+    "Unreal Engine", "OpenCV"],
   languages: "Bahasa Indonesia, bahasa Inggris pasif",
 
   /* Status di pojok atas. Kosongkan "" untuk menyembunyikan. */

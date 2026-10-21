@@ -85,11 +85,11 @@ kosongkan `""` untuk menyembunyikannya.
 
 ## Upload ke GitHub Pages (gratis, bisa dilihat semua orang)
 
-Kamu sudah punya akun GitHub `ghost-45-max`, jadi tinggal:
+Kamu sudah punya akun GitHub `Rande-ops`, jadi tinggal:
 
 1. Buka github.com → **New repository**.
-2. Beri nama **`ghost-45-max.github.io`** supaya alamatnya jadi `https://ghost-45-max.github.io`.
-   Nama lain juga bisa, misalnya `portfolio`, nanti alamatnya `https://ghost-45-max.github.io/portfolio`.
+2. Beri nama **`rande-ops.github.io`** supaya alamatnya jadi `https://rande-ops.github.io`.
+   Nama lain juga bisa, misalnya `portfolio`, nanti alamatnya `https://rande-ops.github.io/portfolio`.
 3. Pilih **Public**, lalu **Create repository**.
 4. Klik **uploading an existing file**, lalu seret semua isi folder ini (index.html, css, js, data, img, files, README.md).
    Seret isinya, bukan foldernya, supaya `index.html` ada di bagian paling atas repository.
