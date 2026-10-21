@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Engelbertus Rande — AR engineer dan 3D modeler</title>
+  <meta name="description" content="Portofolio Engelbertus Rande (Omen), AR engineer dan 3D modeler di Yogyakarta: aplikasi AR dan VR, simulasi, dan model 3D interaktif.">
+  <meta property="og:title" content="Engelbertus Rande — AR engineer dan 3D modeler">
+  <meta property="og:description" content="Aplikasi AR dan VR, simulasi, dan model 3D dari Yogyakarta.">
+  <meta property="og:image" content="img/bravo-3d.webp">
+  <meta name="theme-color" content="#eaf1f8">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l12 7v14l-12 7-12-7V9z' fill='%234f7cf0'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="importmap">{ "imports": { "three": "./vendor/three.module.min.js" } }</script>
+</head>
+<body>
+  <a class="skip" href="#karya">Langsung ke karya</a>
+
+  <!-- Layar pembuka -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <p class="loader-name">RANDE</p>
+      <div class="loader-bar"><span id="loader-fill"></span></div>
+      <p class="loader-row"><span>Memuat dunia 3D</span><span id="loader-count">000</span></p>
+    </div>
+  </div>
+
+  <div class="bg" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span></div>
+
+  <!-- Navigasi -->
+  <header class="nav glass" id="nav">
+    <a class="brand" href="#atas" aria-label="Ke atas"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text">E. Rande</span></a>
+    <nav class="nav-links" id="nav-links" aria-label="Bagian halaman">
+      <a href="#karya">Karya</a>
+      <a href="#keahlian">Keahlian</a>
+      <a href="#model-3d">Model 3D</a>
+      <a href="#pengalaman">Pengalaman</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <p class="badge" id="availability"><span class="dot" aria-hidden="true"></span><span></span></p>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+  </header>
+
+  <main id="atas">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title" class="chrome-title"><span class="t-small" data-bind="first"></span><span class="t-big" data-bind="last"></span></h1>
+        <p class="hero-role"><span data-bind="role"></span> · <span data-bind="location"></span></p>
+        <p class="hero-intro" data-bind="intro"></p>
+        <div class="hero-actions">
+          <a class="btn btn-grad" href="#karya">Lihat karya <span aria-hidden="true">&rarr;</span></a>
+          <a class="btn btn-glass" data-href="cv" href="#" download>Unduh CV <span aria-hidden="true">&darr;</span></a>
+        </div>
+        <ul class="socials" id="socials" aria-label="Profil online"></ul>
+      </div>
+
+      <div class="hero-art glass" id="hero-art">
+        <canvas id="crystal" aria-label="Kristal 3D interaktif. Seret untuk memutar." role="img"></canvas>
+        <div class="crystal-fallback" aria-hidden="true"></div>
+        <p class="art-hint"><span class="dot" aria-hidden="true"></span>Seret untuk memutar</p>
+        <ul class="chips" aria-label="Alat utama">
+          <li class="chip glass c1">Unity 3D</li>
+          <li class="chip glass c2">Blender</li>
+          <li class="chip glass c3">Vuforia</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Angka -->
+    <section class="stats glass" aria-label="Ringkasan">
+      <ul class="stat-list" id="stats"></ul>
+      <blockquote class="stat-quote"><p id="quote"></p><footer>— <span data-bind="nickname"></span></footer></blockquote>
+    </section>
+
+    <!-- Proyek -->
+    <section class="work" id="karya" aria-labelledby="karya-judul">
+      <div class="sec-head">
+        <div>
+          <p class="kicker">Studi kasus</p>
+          <h2 id="karya-judul" class="sec-title">Aplikasi yang saya bangun</h2>
+        </div>
+        <div class="filters glass" role="group" aria-label="Saring proyek" id="filters"></div>
+      </div>
+      <ul class="cards" id="cards"></ul>
+      <p class="demos" id="demos"></p>
+    </section>
+
+    <!-- Keahlian -->
+    <section class="skills" id="keahlian" aria-labelledby="keahlian-judul">
+      <h2 id="keahlian-judul" class="sr">Keahlian</h2>
+      <div class="panel glass">
+        <p class="kicker">Keahlian</p>
+        <h3 class="panel-title">Yang saya kerjakan</h3>
+        <div id="expertise" class="expertise"></div>
+      </div>
+      <div class="panel glass">
+        <p class="kicker">Tech stack</p>
+        <h3 class="panel-title">Alat sehari-hari</h3>
+        <ul id="tech" class="tech"></ul>
+      </div>
+      <div class="panel glass">
+        <p class="kicker">Alur kerja</p>
+        <h3 class="panel-title">Dari ide ke aplikasi</h3>
+        <div class="orbit" id="orbit"><div class="orbit-core"><span>Ide</span></div></div>
+      </div>
+    </section>
+
+    <!-- Model 3D interaktif -->
+    <section class="viewer" id="model-3d" aria-labelledby="model-judul">
+      <div class="sec-head">
+        <div>
+          <p class="kicker">Interaktif</p>
+          <h2 id="model-judul" class="sec-title">Putar sendiri modelnya</h2>
+        </div>
+        <p class="sec-note">Pilih model, seret untuk memutar, scroll atau cubit untuk zoom. Model dimuat dari Sketchfab.</p>
+      </div>
+      <div class="viewer-grid">
+        <div class="viewer-stage glass" id="viewer-stage">
+          <button class="viewer-poster" id="viewer-poster" type="button">
+            <img id="viewer-thumb" alt="" width="1024" height="576">
+            <span class="viewer-play glass"><span class="play-btn" aria-hidden="true">&#9654;</span><span id="viewer-play-label">Putar model 3D</span></span>
+          </button>
+        </div>
+        <div class="viewer-side glass">
+          <p class="viewer-now" aria-live="polite"><span id="viewer-name"></span><span class="viewer-group" id="viewer-group"></span></p>
+          <ul class="viewer-list" id="viewer-list" aria-label="Daftar model 3D"></ul>
+          <a class="text-link" data-href="sketchfab" href="#" target="_blank" rel="noopener">Semua model di Sketchfab &#8599;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeri render -->
+    <section class="gallery" id="aset-3d" aria-labelledby="aset-judul">
+      <div class="sec-head">
+        <div>
+          <p class="kicker">Render Blender</p>
+          <h2 id="aset-judul" class="sec-title">Aset 3D</h2>
+        </div>
+        <div class="strip-controls">
+          <button class="sq glass" type="button" data-strip="-1" aria-label="Geser ke kiri">&larr;</button>
+          <button class="sq glass" type="button" data-strip="1" aria-label="Geser ke kanan">&rarr;</button>
+        </div>
+      </div>
+      <ul class="strip" id="gallery" tabindex="0" aria-label="Galeri render 3D, gulir ke samping"></ul>
+      <p class="strip-count" id="strip-count" aria-live="polite"></p>
+    </section>
+
+    <!-- Pengalaman + tentang -->
+    <section class="exp" id="pengalaman" aria-labelledby="exp-judul">
+      <div class="exp-main glass">
+        <p class="kicker">Perjalanan</p>
+        <h2 id="exp-judul" class="sec-title">Pengalaman</h2>
+        <div class="tabs" role="tablist" id="exp-tabs" aria-label="Kelompok pengalaman"></div>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+      <aside class="about glass" id="tentang" aria-labelledby="tentang-judul">
+        <img class="portrait" data-src="photo" alt="Foto Engelbertus Rande" width="72" height="72" loading="lazy">
+        <h2 id="tentang-judul" class="panel-title">Tentang saya</h2>
+        <div id="letter" class="letter"></div>
+        <p class="langs" id="languages"></p>
+      </aside>
+    </section>
+
+    <!-- Kontak -->
+    <section class="contact glass" id="kontak" aria-labelledby="kontak-judul">
+      <div class="contact-copy">
+        <h2 id="kontak-judul" class="chrome-title contact-title"><span>Ayo bangun</span><span>yang baru</span></h2>
+        <p>Punya ide aplikasi AR, VR, atau butuh aset 3D? Ceritakan singkat, saya balas lewat email.</p>
+        <dl class="contact-rows" id="contact-rows"></dl>
+      </div>
+      <form class="form" id="contact-form">
+        <label for="f-nama">Nama</label>
+        <input id="f-nama" name="nama" type="text" autocomplete="name" placeholder="Nama kamu">
+        <label for="f-pesan">Pesan</label>
+        <textarea id="f-pesan" name="pesan" rows="5" placeholder="Contoh: aplikasi AR untuk katalog produk, target rilis 2 bulan"></textarea>
+        <button class="btn btn-grad" type="submit">Kirim lewat email <span aria-hidden="true">&rarr;</span></button>
+        <p class="form-note">Tombol ini membuka aplikasi email kamu dengan pesan yang sudah terisi.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p><span data-bind="name"></span> · AR dan 3D</p>
+    <p class="foot-links" id="foot-links"></p>
+    <p>&copy; <span id="year">2026</span></p>
+  </footer>
+
+  <noscript>
+    <p class="noscript">Halaman ini butuh JavaScript. Unduh <a href="files/CV-Engelbertus-Rande.pdf">CV Engelbertus Rande</a> atau email barkeromen@gmail.com.</p>
+    <style>.loader{display:none}</style>
+  </noscript>
+
+  <script src="data/site.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/main.js"></script>
+  <script type="module" src="js/crystal.js"></script>
+</body>
+</html>
